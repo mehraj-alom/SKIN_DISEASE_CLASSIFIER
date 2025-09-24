@@ -1,0 +1,3 @@
+artifacts_root : artifacts
+
+model_dir : "artifacts/best_model/"
