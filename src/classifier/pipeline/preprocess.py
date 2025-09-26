@@ -2,6 +2,7 @@ from torchvision.transforms import v2 as transform
 from src.classifier.constants import IMAGENET_MEAN, IMAGENET_STD
 import torch
 from PIL import Image
+from pathlib import Path
 
 class Transform:
     """
@@ -39,7 +40,6 @@ class Transform:
                 image = Image.open(image)
             except Exception as e:
                 raise ValueError(f"Cannot open image: {e}")
-        # Convert grayscale to RGB if needed
         if image.mode != "RGB":
             image = image.convert("RGB")
         try:
@@ -52,3 +52,17 @@ class Transform:
             return transform_pipeline(image)
         except Exception as e:
             raise ValueError(f"Error during preprocessing: {e}")
+
+def main():
+    """
+     main function for testing the Transform.preprocess_image utility.
+    """
+    image_path = Path("aug_450_lichen-planus-106.jpg")
+    try:
+        tensor = Transform.preprocess_image(image_path)
+        print("Preprocessing successful. Tensor shape:", tensor.shape)
+    except Exception as e:
+        print("Preprocessing failed:", e)
+
+if __name__ == "__main__":
+    main()
