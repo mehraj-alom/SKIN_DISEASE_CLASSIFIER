@@ -11,7 +11,6 @@ CURRENT_STAGE = "Preprocess"
 
 try: 
     logger.info(f">>>>> stage {CURRENT_STAGE} started <<<<<")
-    # Example image path for preprocessing
     image_path = "test_data/1Dermatofibroma.jpeg"
     tensor = Transform.preprocess_image(image_path)
     logger.info(f"Preprocessing successful. Tensor shape: {tensor.shape}")

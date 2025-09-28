@@ -9,7 +9,7 @@ import uvicorn
 
 app = FastAPI()
 
-# ------------------ Model Config ------------------
+# ----- Model Config ------------------
 config = PredictionConfig(
     model_path=Path("artifacts/best_model/best_skin_model_full.pth"),
     device="cpu",

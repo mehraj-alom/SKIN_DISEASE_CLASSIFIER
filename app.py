@@ -39,7 +39,7 @@ if uploaded_file is not None:
             if predictor.model is None:
                 st.error("❌ Model failed to load. Check model_path.")
             else:
-                # ------------------ Prediction ------------------
+                # -------Prediction ------------------
                 probs = predictor.predict(image)  # pass PIL.Image directly
 
                 if probs is None:
