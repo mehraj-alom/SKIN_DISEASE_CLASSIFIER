@@ -356,8 +356,8 @@ advice. Never make medical decisions based solely on this software's output.
 - **Medical professionals** who create educational resources about dermatology
 ## 📞 Contact & Support
 - **GitHub Issues**: For bug reports and feature requests
-[![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)](https://www.linkedin.com/in/mehraj-alom-tapadar-b1abb025b)
 
+[LinkedIn](https://www.linkedin.com/in/mehraj-alom-tapadar-b1abb025b)
 - **Repository**:
 [SKIN_DISEASE_CLASSIFIER](https://github.com/mehraj-alom/SKIN_DISEASE_CLASSIFIER)
 - **Discussions**: Open for collaboration and questions
