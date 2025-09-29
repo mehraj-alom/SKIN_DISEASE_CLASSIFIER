@@ -231,8 +231,9 @@ docker run -p 8501:8501 -p 8000:8000
 docker build -t skin-disease-classifier .
 # Run the container
 docker run -p 8501:8501 -p 8000:8000 skin-disease-classifier -->
-        #Will be available from the future versions
+#Will be available from the future versions
 ```
+
 ## 💻 Usage
 ### Running the Streamlit App
 ```bash
@@ -355,7 +356,8 @@ advice. Never make medical decisions based solely on this software's output.
 - **Medical professionals** who create educational resources about dermatology
 ## 📞 Contact & Support
 - **GitHub Issues**: For bug reports and feature requests
-- **Linkdin** : [linkdin](www.linkedin.com/in/mehraj-alom-tapadar-b1abb025b)
+[![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)](https://www.linkedin.com/in/mehraj-alom-tapadar-b1abb025b)
+
 - **Repository**:
 [SKIN_DISEASE_CLASSIFIER](https://github.com/mehraj-alom/SKIN_DISEASE_CLASSIFIER)
 - **Discussions**: Open for collaboration and questions
