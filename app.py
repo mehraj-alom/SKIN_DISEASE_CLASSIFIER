@@ -10,8 +10,9 @@ from src.classifier import logger
 from src.classifier.entity.config_entity import PredictionConfig
 from src.classifier.pipeline.predict import Prediction_Pipeline
 from src.classifier.utils.class_mapping import all_labels
+from conditions import conditions_info
 
-# ------------------ Directories ------------------
+#------------------ Directories --------
 ARTIFACT_DIR = Path("artifacts/stramlit")
 TEMP_DIR = Path("temp")
 ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
@@ -29,7 +30,7 @@ if uploaded_file is not None:
 
     if st.button("Predict"):
         try:
-            # ------------------ Config & Pipeline ------------------
+#------------------ Config & Pipeline ----
             config = PredictionConfig(
                 model_path=Path("artifacts/best_model/best_skin_model_full.pth"),
                 device="cpu"
@@ -37,13 +38,13 @@ if uploaded_file is not None:
             predictor = Prediction_Pipeline(config=config)
 
             if predictor.model is None:
-                st.error("❌ Model failed to load. Check model_path.")
+                st.error("Model failed to load. Check model_path.")
             else:
-                # -------Prediction ------------------
-                probs = predictor.predict(image)  # pass PIL.Image directly
+#------- Prediction ------------------
+                probs = predictor.predict(image) 
 
                 if probs is None:
-                    st.error("❌ Prediction failed.")
+                    st.error("Prediction failed.")
                 else:
                     probs_tensor = torch.tensor(probs) if not isinstance(probs, torch.Tensor) else probs
 
@@ -54,5 +55,17 @@ if uploaded_file is not None:
                     for cls, prob in zip(top3_classes, top3_probs.tolist()[0]):
                         st.write(f"**{cls}** : {prob*100:.2f}%")
 
+#Show condition details 
+                        if cls in conditions_info:
+                            info = conditions_info[cls]
+                            with st.expander(f" Details for {cls}"):
+                                st.markdown(f"**Risk:** {info['risk']}")
+                                st.markdown(f"**Description:** {info['description']}")
+                                st.markdown("**Recommendations:**")
+                                for rec in info["recommendations"]:
+                                    st.markdown(f"- {rec}")
+                        else:
+                            st.info(f"No extra info available for {cls}")
+
         except Exception as e:
-            st.error(f"❌ Error during prediction: {str(e)}")
+            st.error(f"Error during prediction: {str(e)}")
