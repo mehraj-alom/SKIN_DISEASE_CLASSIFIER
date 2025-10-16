@@ -6,6 +6,7 @@ from functools import reduce
 from xml.etree import ElementTree as et 
 from shutil import move 
 
+
 def extract_xml_files(file_path: str):
     """
     Takes a directory path and returns all .xml files inside.
