@@ -161,7 +161,7 @@ The classifier can identify 27 different skin conditions:
 ```
 SKIN_DISEASE_CLASSIFIER/
 │
-├── artifacts/ # Duplicate folder (to be cleaned)
+├── artifacts/ 
 ├── artifacts/ # Model artifacts
 │ └── best_model.pth # Trained model weights
 │
