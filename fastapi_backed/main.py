@@ -18,7 +18,7 @@ config = PredictionConfig(
 try:
     predictor = Prediction_Pipeline(config=config)
 except Exception as e:
-    print(f"❌ Error initializing Prediction_Pipeline: {e}")
+    print(f" Error initializing Prediction_Pipeline: {e}")
     predictor = None
 
 # --------Endpoints ------------------
@@ -63,4 +63,5 @@ async def predict_image(file: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.01", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
