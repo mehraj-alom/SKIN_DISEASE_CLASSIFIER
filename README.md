@@ -291,23 +291,41 @@ minority classes
 - Used Optuna for automated architecture and hyperparameter search
 - Selected EfficientNet-B2 for optimal balance of accuracy and efficiency
 ## 🔮 Future Roadmap
-### Version 2.0 (Planned)
-- **Vision Transformers (ViT)**: Implement state-of-the-art transformer architectures
-- **Enhanced Performance**: Target 80%+ accuracy
-- **Better Generalization**: Improved performance on minority classes
-### Version 3.0 (Planned)
+
+### ✅ Version 1.0 (Completed)
+- **Transfer Learning with EfficientNet-B2**: Baseline classification model
+- **27 Skin Condition Classifications**: Multi-class classification
+- **71% Accuracy**: Proof-of-concept performance
+- **FastAPI + Streamlit**: Full-stack deployment
+
+### 🚧 Version 2.0 (In Progress)
 - **Object Detection**: Implement YOLO/Faster R-CNN for locating affected skin areas
+- **Bounding Box Detection**: Automatically identify and isolate lesion regions
+- **Region-of-Interest Classification**: Send detected bounding box areas to classifier
 - **Multi-lesion Detection**: Identify multiple conditions in a single image
-- **Bounding Box Visualization**: Highlight specific problem areas
-### Version 4.0 (Planned)
+- **Enhanced Visualization**: Highlight specific problem areas with bounding boxes
+
+### 📋 Version 3.0 (Planned)
+- **Vision Transformers (ViT)**: Implement state-of-the-art transformer architectures
+- **Enhanced Performance**: Target 80%+ accuracy through ViT integration
+- **Better Generalization**: Improved performance on minority classes
+- **Attention Mechanisms**: Leverage self-attention for better feature extraction
+
+### 📋 Version 4.0 (Planned)
 - **Image Segmentation**: Pixel-level classification using U-Net/Mask R-CNN
 - **Detailed Area Analysis**: Precise mapping of affected regions
 - **Severity Assessment**: Quantify the extent of skin conditions
-### Version 5.0 (Planned)
-- **Advanced Optimization**: Ensemble methods, attention mechanisms
+- **Semantic Segmentation**: Separate diseased from healthy tissue
+
+### 📋 Version 5.0+ (Future)
+- **Advanced Optimization**: Ensemble methods combining detection, segmentation, and classification
 - **Performance Boost**: Target 90%+ accuracy
 - **Real-time Processing**: Optimized inference speed
 - **Mobile Deployment**: Lightweight models for mobile devices
+- **Clinical Integration**: DICOM support and medical system compatibility
+
+> **Note**: The roadmap is flexible and may change based on requirements, performance results, and community feedback. Each version builds upon the previous, creating a comprehensive diagnostic assistance system.
+
 
 ## 🤝 Contributing
 We welcome contributions from the community! Whether you're a junior developer learning ML
